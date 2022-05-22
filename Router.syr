@@ -1,0 +1,807 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: Router.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Router.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Router"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : Router
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\GraytoBinary.vhd" into library work
+Parsing entity <GraytoBinary>.
+Parsing architecture <Behavioral> of entity <graytobinary>.
+WARNING:HDLCompiler:1369 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\GraytoBinary.vhd" Line 16: Possible infinite loop; process does not have a wait statement
+Parsing VHDL file "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\GrayCounter.vhd" into library work
+Parsing entity <GrayCounter>.
+Parsing architecture <behavioral> of entity <graycounter>.
+Parsing VHDL file "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\FIFO_control.vhd" into library work
+Parsing entity <FIFO_control>.
+Parsing architecture <Behavioral> of entity <fifo_control>.
+Parsing VHDL file "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\DualRam.vhd" into library work
+Parsing entity <DualRam>.
+Parsing architecture <Behavioral> of entity <dualram>.
+Parsing VHDL file "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\scheduler.vhd" into library work
+Parsing entity <scheduler>.
+Parsing architecture <Behavioral> of entity <scheduler>.
+Parsing VHDL file "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\ib.vhd" into library work
+Parsing entity <ib>.
+Parsing architecture <Behav> of entity <ib>.
+Parsing VHDL file "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\FIFO.vhd" into library work
+Parsing entity <FIFO>.
+Parsing architecture <Behavioral> of entity <fifo>.
+Parsing VHDL file "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\DeMux.vhd" into library work
+Parsing entity <DeMux>.
+Parsing architecture <Behav> of entity <demux>.
+Parsing VHDL file "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" into library work
+Parsing entity <Router>.
+Parsing architecture <Behavioral> of entity <router>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Router> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ib> (architecture <Behav>) from library <work>.
+
+Elaborating entity <DeMux> (architecture <Behav>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\DeMux.vhd" Line 31: d_in should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\DeMux.vhd" Line 37: d_in should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\DeMux.vhd" Line 43: d_in should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\DeMux.vhd" Line 49: d_in should be on the sensitivity list of the process
+INFO:HDLCompiler:679 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\DeMux.vhd" Line 54. Case statement is complete. others clause is never selected
+
+Elaborating entity <FIFO> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <FIFO_control> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <GrayCounter> (architecture <behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\GrayCounter.vhd" Line 22: en should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\GrayCounter.vhd" Line 23: reset should be on the sensitivity list of the process
+
+Elaborating entity <GraytoBinary> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <DualRam> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <scheduler> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\scheduler.vhd" Line 24: reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\scheduler.vhd" Line 35: din1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\scheduler.vhd" Line 42: din2 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\scheduler.vhd" Line 49: din3 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\scheduler.vhd" Line 56: din4 should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Router>.
+    Related source file is "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd".
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 114: Output port <full> of the instance <fifo_11> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 114: Output port <empty> of the instance <fifo_11> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 115: Output port <full> of the instance <fifo_21> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 115: Output port <empty> of the instance <fifo_21> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 116: Output port <full> of the instance <fifo_31> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 116: Output port <empty> of the instance <fifo_31> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 117: Output port <full> of the instance <fifo_41> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 117: Output port <empty> of the instance <fifo_41> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 118: Output port <full> of the instance <fifo_12> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 118: Output port <empty> of the instance <fifo_12> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 119: Output port <full> of the instance <fifo_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 119: Output port <empty> of the instance <fifo_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 120: Output port <full> of the instance <fifo_32> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 120: Output port <empty> of the instance <fifo_32> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 121: Output port <full> of the instance <fifo_42> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 121: Output port <empty> of the instance <fifo_42> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 122: Output port <full> of the instance <fifo_13> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 122: Output port <empty> of the instance <fifo_13> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 123: Output port <full> of the instance <fifo_23> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 123: Output port <empty> of the instance <fifo_23> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 124: Output port <full> of the instance <fifo_33> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 124: Output port <empty> of the instance <fifo_33> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 125: Output port <full> of the instance <fifo_43> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 125: Output port <empty> of the instance <fifo_43> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 126: Output port <full> of the instance <fifo_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 126: Output port <empty> of the instance <fifo_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 127: Output port <full> of the instance <fifo_24> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 127: Output port <empty> of the instance <fifo_24> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 128: Output port <full> of the instance <fifo_34> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 128: Output port <empty> of the instance <fifo_34> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 129: Output port <full> of the instance <fifo_44> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\Router.vhd" line 129: Output port <empty> of the instance <fifo_44> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <Router> synthesized.
+
+Synthesizing Unit <ib>.
+    Related source file is "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\ib.vhd".
+    Found 8-bit register for signal <Data_out>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <ib> synthesized.
+
+Synthesizing Unit <DeMux>.
+    Related source file is "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\DeMux.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out1<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out1<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out1<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out1<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out1<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out1<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out1<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out2<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out2<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out2<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out2<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out2<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out2<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out2<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out2<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out3<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out3<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out3<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out3<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out3<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out3<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out3<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out3<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out4<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out4<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out4<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out4<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out4<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out4<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out4<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out4<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_out1<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred  32 Latch(s).
+	inferred  32 Multiplexer(s).
+Unit <DeMux> synthesized.
+
+Synthesizing Unit <FIFO>.
+    Related source file is "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\FIFO.vhd".
+    Summary:
+	no macro.
+Unit <FIFO> synthesized.
+
+Synthesizing Unit <FIFO_control>.
+    Related source file is "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\FIFO_control.vhd".
+        add_width = 3
+    Found 1-bit register for signal <write_valid>.
+    Found 5-bit register for signal <r_ptr_reg>.
+    Found 5-bit register for signal <w_ptr_reg>.
+    Found 1-bit register for signal <read_valid>.
+    Found 5-bit adder for signal <w_ptr_reg[4]_GND_40_o_add_2_OUT> created at line 1241.
+    Found 5-bit adder for signal <r_ptr_reg[4]_GND_40_o_add_5_OUT> created at line 1241.
+    Found 3-bit comparator equal for signal <r_ptr_reg[2]_w_ptr_reg[2]_equal_5_o> created at line 83
+    Found 5-bit comparator equal for signal <empty_s> created at line 99
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <FIFO_control> synthesized.
+
+Synthesizing Unit <GrayCounter>.
+    Related source file is "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\GrayCounter.vhd".
+    Found 4-bit register for signal <count>.
+    Found 4-bit adder for signal <count[3]_GND_43_o_add_0_OUT> created at line 26.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+Unit <GrayCounter> synthesized.
+
+Synthesizing Unit <GraytoBinary>.
+    Related source file is "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\GraytoBinary.vhd".
+    Summary:
+Unit <GraytoBinary> synthesized.
+
+Synthesizing Unit <DualRam>.
+    Related source file is "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\DualRam.vhd".
+    Found 8x8-bit dual-port RAM <Mram_word> for signal <word>.
+    Found 8-bit register for signal <D_OUT>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <DualRam> synthesized.
+
+Synthesizing Unit <scheduler>.
+    Related source file is "C:\Projects\Xilinx\Spring 2020\Electronic Design Automation\Project\Router\scheduler.vhd".
+    Found 2-bit register for signal <current_state>.
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clock (rising_edge)                            |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | d1                                             |
+    | Power Up State     | d1                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit 4-to-1 multiplexer for signal <dout> created at line 33.
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <scheduler> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 16
+ 8x8-bit dual-port RAM                                 : 16
+# Adders/Subtractors                                   : 64
+ 4-bit adder                                           : 32
+ 5-bit adder                                           : 32
+# Registers                                            : 116
+ 1-bit register                                        : 32
+ 4-bit register                                        : 32
+ 5-bit register                                        : 32
+ 8-bit register                                        : 20
+# Latches                                              : 128
+ 1-bit latch                                           : 128
+# Comparators                                          : 32
+ 3-bit comparator equal                                : 16
+ 5-bit comparator equal                                : 16
+# Multiplexers                                         : 132
+ 1-bit 2-to-1 multiplexer                              : 128
+ 8-bit 4-to-1 multiplexer                              : 4
+# FSMs                                                 : 4
+# Xors                                                 : 144
+ 1-bit xor2                                            : 112
+ 4-bit xor2                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <DualRam>.
+INFO:Xst:3231 - The small RAM <Mram_word> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     clkA           | connected to signal <CLKA>          | rise     |
+    |     weA            | connected to signal <WEA>           | high     |
+    |     addrA          | connected to signal <ADDRA>         |          |
+    |     diA            | connected to signal <D_IN>          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     addrB          | connected to signal <ADDRB>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <DualRam> synthesized (advanced).
+
+Synthesizing (advanced) Unit <FIFO_control>.
+The following registers are absorbed into counter <r_ptr_reg>: 1 register on signal <r_ptr_reg>.
+The following registers are absorbed into counter <w_ptr_reg>: 1 register on signal <w_ptr_reg>.
+Unit <FIFO_control> synthesized (advanced).
+
+Synthesizing (advanced) Unit <GrayCounter>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <GrayCounter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 16
+ 8x8-bit dual-port distributed RAM                     : 16
+# Counters                                             : 64
+ 4-bit up counter                                      : 32
+ 5-bit up counter                                      : 32
+# Registers                                            : 192
+ Flip-Flops                                            : 192
+# Comparators                                          : 32
+ 3-bit comparator equal                                : 16
+ 5-bit comparator equal                                : 16
+# Multiplexers                                         : 132
+ 1-bit 2-to-1 multiplexer                              : 128
+ 8-bit 4-to-1 multiplexer                              : 4
+# FSMs                                                 : 4
+# Xors                                                 : 144
+ 1-bit xor2                                            : 112
+ 4-bit xor2                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <current_state[1:4]> with one-hot encoding.
+Optimizing FSM <FSM_0> on signal <current_state[1:4]> with one-hot encoding.
+Optimizing FSM <FSM_0> on signal <current_state[1:4]> with one-hot encoding.
+Optimizing FSM <FSM_0> on signal <current_state[1:4]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ d1    | 0001
+ d2    | 0010
+ d3    | 0100
+ d4    | 1000
+-------------------
+
+Optimizing unit <ib> ...
+
+Optimizing unit <DualRam> ...
+
+Optimizing unit <Router> ...
+
+Optimizing unit <FIFO_control> ...
+
+Optimizing unit <DeMux> ...
+WARNING:Xst:2677 - Node <fifo_11/FIFO_Controller/gray_read/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_11/FIFO_Controller/gray_write/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_21/FIFO_Controller/gray_read/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_21/FIFO_Controller/gray_write/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_31/FIFO_Controller/gray_read/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_31/FIFO_Controller/gray_write/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_41/FIFO_Controller/gray_read/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_41/FIFO_Controller/gray_write/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_12/FIFO_Controller/gray_read/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_12/FIFO_Controller/gray_write/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_22/FIFO_Controller/gray_read/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_22/FIFO_Controller/gray_write/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_32/FIFO_Controller/gray_read/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_32/FIFO_Controller/gray_write/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_42/FIFO_Controller/gray_read/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_42/FIFO_Controller/gray_write/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_13/FIFO_Controller/gray_read/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_13/FIFO_Controller/gray_write/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_23/FIFO_Controller/gray_read/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_23/FIFO_Controller/gray_write/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_33/FIFO_Controller/gray_read/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_33/FIFO_Controller/gray_write/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_43/FIFO_Controller/gray_read/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_43/FIFO_Controller/gray_write/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_14/FIFO_Controller/gray_read/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_14/FIFO_Controller/gray_write/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_24/FIFO_Controller/gray_read/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_24/FIFO_Controller/gray_write/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_34/FIFO_Controller/gray_read/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_34/FIFO_Controller/gray_write/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_44/FIFO_Controller/gray_read/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:2677 - Node <fifo_44/FIFO_Controller/gray_write/count_3> of sequential type is unconnected in block <Router>.
+WARNING:Xst:1710 - FF/Latch <DeMux_4/d_out2_1> (without init value) has a constant value of 0 in block <Router>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DeMux_4/d_out1_1> (without init value) has a constant value of 0 in block <Router>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DeMux_3/d_out2_1> (without init value) has a constant value of 0 in block <Router>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DeMux_3/d_out1_1> (without init value) has a constant value of 0 in block <Router>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DeMux_2/d_out2_1> (without init value) has a constant value of 0 in block <Router>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DeMux_2/d_out1_1> (without init value) has a constant value of 0 in block <Router>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DeMux_1/d_out2_1> (without init value) has a constant value of 0 in block <Router>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DeMux_1/d_out1_1> (without init value) has a constant value of 0 in block <Router>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <scheduler4/current_state_FSM_FFd1> in Unit <Router> is equivalent to the following 3 FFs/Latches, which will be removed : <scheduler2/current_state_FSM_FFd1> <scheduler3/current_state_FSM_FFd1> <scheduler1/current_state_FSM_FFd1> 
+INFO:Xst:2261 - The FF/Latch <scheduler4/current_state_FSM_FFd2> in Unit <Router> is equivalent to the following 3 FFs/Latches, which will be removed : <scheduler2/current_state_FSM_FFd2> <scheduler3/current_state_FSM_FFd2> <scheduler1/current_state_FSM_FFd2> 
+INFO:Xst:2261 - The FF/Latch <scheduler4/current_state_FSM_FFd3> in Unit <Router> is equivalent to the following 3 FFs/Latches, which will be removed : <scheduler2/current_state_FSM_FFd3> <scheduler3/current_state_FSM_FFd3> <scheduler1/current_state_FSM_FFd3> 
+INFO:Xst:2261 - The FF/Latch <scheduler4/current_state_FSM_FFd4> in Unit <Router> is equivalent to the following 3 FFs/Latches, which will be removed : <scheduler2/current_state_FSM_FFd4> <scheduler3/current_state_FSM_FFd4> <scheduler1/current_state_FSM_FFd4> 
+
+Mapping all equations...
+WARNING:Xst:1710 - FF/Latch <DeMux_4/d_out3_0> (without init value) has a constant value of 0 in block <Router>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DeMux_4/d_out1_0> (without init value) has a constant value of 0 in block <Router>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DeMux_3/d_out3_0> (without init value) has a constant value of 0 in block <Router>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DeMux_3/d_out1_0> (without init value) has a constant value of 0 in block <Router>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DeMux_2/d_out3_0> (without init value) has a constant value of 0 in block <Router>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DeMux_2/d_out1_0> (without init value) has a constant value of 0 in block <Router>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DeMux_1/d_out3_0> (without init value) has a constant value of 0 in block <Router>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DeMux_1/d_out1_0> (without init value) has a constant value of 0 in block <Router>. This FF/Latch will be trimmed during the optimization process.
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <DeMux_1/d_out4_0> in Unit <Router> is equivalent to the following 3 FFs/Latches, which will be removed : <DeMux_1/d_out4_1> <DeMux_1/d_out3_1> <DeMux_1/d_out2_0> 
+INFO:Xst:2261 - The FF/Latch <DeMux_4/d_out4_0> in Unit <Router> is equivalent to the following 3 FFs/Latches, which will be removed : <DeMux_4/d_out4_1> <DeMux_4/d_out3_1> <DeMux_4/d_out2_0> 
+INFO:Xst:2261 - The FF/Latch <DeMux_2/d_out4_0> in Unit <Router> is equivalent to the following 3 FFs/Latches, which will be removed : <DeMux_2/d_out4_1> <DeMux_2/d_out3_1> <DeMux_2/d_out2_0> 
+INFO:Xst:2261 - The FF/Latch <DeMux_3/d_out4_0> in Unit <Router> is equivalent to the following 3 FFs/Latches, which will be removed : <DeMux_3/d_out4_1> <DeMux_3/d_out3_1> <DeMux_3/d_out2_0> 
+Found area constraint ratio of 100 (+ 5) on block Router, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 452
+ Flip-Flops                                            : 452
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Router.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 617
+#      GND                         : 1
+#      INV                         : 32
+#      LUT2                        : 120
+#      LUT3                        : 192
+#      LUT4                        : 96
+#      LUT5                        : 48
+#      LUT6                        : 128
+# FlipFlops/Latches                : 552
+#      FDC                         : 19
+#      FDCE                        : 288
+#      FDE                         : 128
+#      FDP                         : 17
+#      LD                          : 100
+# RAMS                             : 48
+#      RAM32M                      : 16
+#      RAM32X1D                    : 32
+# Clock Buffers                    : 6
+#      BUFG                        : 4
+#      BUFGP                       : 2
+# IO Buffers                       : 69
+#      IBUF                        : 37
+#      OBUF                        : 32
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             528  out of  126800     0%  
+ Number of Slice LUTs:                  744  out of  63400     1%  
+    Number used as Logic:               616  out of  63400     0%  
+    Number used as Memory:              128  out of  19000     0%  
+       Number used as RAM:              128
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    777
+   Number with an unused Flip Flop:     249  out of    777    32%  
+   Number with an unused LUT:            33  out of    777     4%  
+   Number of fully used LUT-FF pairs:   495  out of    777    63%  
+   Number of unique control sets:        78
+
+IO Utilization: 
+ Number of IOs:                          71
+ Number of bonded IOBs:                  71  out of    210    33%  
+    IOB Flip Flops/Latches:              24
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                6  out of     32    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+rclock                             | BUFGP                  | 276   |
+wclock                             | BUFGP                  | 224   |
+wr4                                | IBUF+BUFG              | 25    |
+wr3                                | IBUF+BUFG              | 25    |
+wr2                                | IBUF+BUFG              | 25    |
+wr1                                | IBUF+BUFG              | 25    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 1.665ns (Maximum Frequency: 600.673MHz)
+   Minimum input arrival time before clock: 1.432ns
+   Maximum output required time after clock: 2.014ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'rclock'
+  Clock period: 1.665ns (frequency: 600.673MHz)
+  Total number of paths / destination ports: 1508 / 580
+-------------------------------------------------------------------------
+Delay:               1.665ns (Levels of Logic = 2)
+  Source:            fifo_11/FIFO_Controller/r_ptr_reg_3 (FF)
+  Destination:       fifo_11/FIFO_Controller/r_ptr_reg_4 (FF)
+  Source Clock:      rclock rising
+  Destination Clock: rclock rising
+
+  Data Path: fifo_11/FIFO_Controller/r_ptr_reg_3 to fifo_11/FIFO_Controller/r_ptr_reg_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.361   0.314  fifo_11/FIFO_Controller/r_ptr_reg_3 (fifo_11/FIFO_Controller/r_ptr_reg_3)
+     LUT2:I1->O            5   0.097   0.398  fifo_11/FIFO_Controller/empty_s31 (fifo_11/FIFO_Controller/empty_s4)
+     LUT6:I4->O            6   0.097   0.302  fifo_11/FIFO_Controller/r_req_empty_s_AND_6_o1_cepot (fifo_11/FIFO_Controller/r_req_empty_s_AND_6_o1_cepot)
+     FDCE:CE                   0.095          fifo_11/FIFO_Controller/r_ptr_reg_0
+    ----------------------------------------
+    Total                      1.665ns (0.650ns logic, 1.015ns route)
+                                       (39.0% logic, 61.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'wclock'
+  Clock period: 1.582ns (frequency: 631.981MHz)
+  Total number of paths / destination ports: 1086 / 512
+-------------------------------------------------------------------------
+Delay:               1.582ns (Levels of Logic = 1)
+  Source:            IB_1/Data_out_0 (FF)
+  Destination:       fifo_11/FIFO_Controller/gray_write/count_2 (FF)
+  Source Clock:      wclock rising
+  Destination Clock: wclock rising
+
+  Data Path: IB_1/Data_out_0 to fifo_11/FIFO_Controller/gray_write/count_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            33   0.361   0.486  IB_1/Data_out_0 (IB_1/Data_out_0)
+     LUT4:I2->O            3   0.097   0.289  fifo_11/FIFO_Controller/gray_write/Reset_En_AND_8_o1 (fifo_11/FIFO_Controller/gray_write/Reset_En_AND_8_o)
+     FDCE:CLR                  0.349          fifo_11/FIFO_Controller/gray_write/count_0
+    ----------------------------------------
+    Total                      1.582ns (0.807ns logic, 0.775ns route)
+                                       (51.0% logic, 49.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'rclock'
+  Total number of paths / destination ports: 148 / 148
+-------------------------------------------------------------------------
+Offset:              1.296ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       fifo_11/FIFO_Controller/gray_read/count_2 (FF)
+  Destination Clock: rclock rising
+
+  Data Path: rst to fifo_11/FIFO_Controller/gray_read/count_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           248   0.001   0.519  rst_IBUF (rst_IBUF)
+     LUT2:I0->O           12   0.097   0.330  fifo_11/FIFO_Controller/gray_read/Reset_En_AND_8_o1 (fifo_11/FIFO_Controller/gray_read/Reset_En_AND_8_o)
+     FDCE:CLR                  0.349          fifo_11/FIFO_Controller/gray_read/count_0
+    ----------------------------------------
+    Total                      1.296ns (0.447ns logic, 0.849ns route)
+                                       (34.5% logic, 65.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'wclock'
+  Total number of paths / destination ports: 416 / 368
+-------------------------------------------------------------------------
+Offset:              1.432ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       fifo_11/FIFO_Controller/gray_write/count_2 (FF)
+  Destination Clock: wclock rising
+
+  Data Path: rst to fifo_11/FIFO_Controller/gray_write/count_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           248   0.001   0.696  rst_IBUF (rst_IBUF)
+     LUT4:I0->O            3   0.097   0.289  fifo_41/FIFO_Controller/gray_write/Reset_En_AND_8_o1 (fifo_41/FIFO_Controller/gray_write/Reset_En_AND_8_o)
+     FDCE:CLR                  0.349          fifo_41/FIFO_Controller/gray_write/count_0
+    ----------------------------------------
+    Total                      1.432ns (0.447ns logic, 0.985ns route)
+                                       (31.2% logic, 68.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'rclock'
+  Total number of paths / destination ports: 256 / 32
+-------------------------------------------------------------------------
+Offset:              2.014ns (Levels of Logic = 3)
+  Source:            scheduler4/current_state_FSM_FFd2 (FF)
+  Destination:       datao1<7> (PAD)
+  Source Clock:      rclock rising
+
+  Data Path: scheduler4/current_state_FSM_FFd2 to datao1<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             66   0.361   0.668  scheduler4/current_state_FSM_FFd2 (scheduler4/current_state_FSM_FFd2)
+     LUT4:I0->O            1   0.097   0.511  scheduler4/Mmux_dout<0>_SW0 (N2)
+     LUT5:I2->O            1   0.097   0.279  scheduler4/Mmux_dout<0> (datao4_0_OBUF)
+     OBUF:I->O                 0.000          datao4_0_OBUF (datao4<0>)
+    ----------------------------------------
+    Total                      2.014ns (0.555ns logic, 1.459ns route)
+                                       (27.6% logic, 72.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock rclock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+rclock         |    1.665|         |         |         |
+wclock         |    1.808|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock wclock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+rclock         |    1.505|         |         |         |
+wclock         |    1.582|         |         |         |
+wr1            |         |    1.013|         |         |
+wr2            |         |    1.013|         |         |
+wr3            |         |    1.013|         |         |
+wr4            |         |    1.013|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock wr1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+wclock         |         |         |    1.076|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock wr2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+wclock         |         |         |    1.076|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock wr3
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+wclock         |         |         |    1.076|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock wr4
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+wclock         |         |         |    1.076|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.80 secs
+ 
+--> 
+
+Total memory usage is 4604220 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   92 (   0 filtered)
+Number of infos    :   41 (   0 filtered)
+

@@ -1,0 +1,186 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml Router.twx Router.ncd -o Router.twr Router.pcf
+
+Design file:              Router.ncd
+Physical constraint file: Router.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock rclock
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+rst         |    4.517(R)|      SLOW  |    0.784(R)|      SLOW  |rclock_BUFGP      |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock wclock
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+datai1<0>   |   -0.128(R)|      FAST  |    2.047(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai1<1>   |   -0.183(R)|      FAST  |    2.104(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai1<2>   |   -1.057(R)|      FAST  |    3.160(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai1<3>   |   -1.070(R)|      FAST  |    3.173(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai1<4>   |   -1.064(R)|      FAST  |    3.167(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai1<5>   |   -1.063(R)|      FAST  |    3.166(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai1<6>   |   -1.083(R)|      FAST  |    3.186(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai1<7>   |   -1.084(R)|      FAST  |    3.187(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai2<0>   |   -0.050(R)|      FAST  |    1.806(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai2<1>   |   -0.076(R)|      FAST  |    1.824(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai2<2>   |   -1.083(R)|      FAST  |    3.186(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai2<3>   |   -1.085(R)|      FAST  |    3.188(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai2<4>   |   -1.080(R)|      FAST  |    3.183(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai2<5>   |   -1.071(R)|      FAST  |    3.175(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai2<6>   |   -1.091(R)|      FAST  |    3.194(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai2<7>   |   -1.046(R)|      FAST  |    3.146(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai3<0>   |    0.020(R)|      FAST  |    1.656(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai3<1>   |    0.100(R)|      FAST  |    1.574(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai3<2>   |   -1.032(R)|      FAST  |    3.133(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai3<3>   |   -1.035(R)|      FAST  |    3.136(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai3<4>   |   -1.040(R)|      FAST  |    3.141(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai3<5>   |   -1.033(R)|      FAST  |    3.134(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai3<6>   |   -1.055(R)|      FAST  |    3.155(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai3<7>   |   -1.031(R)|      FAST  |    3.132(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai4<0>   |   -0.051(R)|      FAST  |    1.823(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai4<1>   |    0.081(R)|      FAST  |    1.715(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai4<2>   |   -1.066(R)|      FAST  |    3.170(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai4<3>   |   -1.053(R)|      FAST  |    3.157(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai4<4>   |   -1.054(R)|      FAST  |    3.158(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai4<5>   |   -1.053(R)|      FAST  |    3.156(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai4<6>   |   -1.054(R)|      FAST  |    3.158(R)|      SLOW  |wclock_BUFGP      |   0.000|
+datai4<7>   |   -1.048(R)|      FAST  |    3.151(R)|      SLOW  |wclock_BUFGP      |   0.000|
+rst         |    5.407(R)|      SLOW  |    2.230(R)|      SLOW  |wclock_BUFGP      |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock rclock to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+datao1<0>   |         9.797(R)|      SLOW  |         3.687(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao1<1>   |        10.186(R)|      SLOW  |         3.805(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao1<2>   |         9.442(R)|      SLOW  |         3.748(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao1<3>   |         9.774(R)|      SLOW  |         3.675(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao1<4>   |         9.284(R)|      SLOW  |         3.705(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao1<5>   |         9.454(R)|      SLOW  |         3.818(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao1<6>   |        10.649(R)|      SLOW  |         4.219(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao1<7>   |         9.753(R)|      SLOW  |         3.752(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao2<0>   |         9.813(R)|      SLOW  |         3.602(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao2<1>   |         9.513(R)|      SLOW  |         3.512(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao2<2>   |         9.464(R)|      SLOW  |         3.447(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao2<3>   |         9.828(R)|      SLOW  |         3.571(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao2<4>   |         9.571(R)|      SLOW  |         3.436(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao2<5>   |         9.640(R)|      SLOW  |         3.630(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao2<6>   |        10.067(R)|      SLOW  |         3.592(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao2<7>   |         9.876(R)|      SLOW  |         3.566(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao3<0>   |         9.747(R)|      SLOW  |         3.698(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao3<1>   |         9.690(R)|      SLOW  |         3.643(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao3<2>   |         9.665(R)|      SLOW  |         3.761(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao3<3>   |         9.395(R)|      SLOW  |         3.733(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao3<4>   |         9.430(R)|      SLOW  |         3.745(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao3<5>   |         9.514(R)|      SLOW  |         3.813(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao3<6>   |         9.517(R)|      SLOW  |         3.642(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao3<7>   |         9.653(R)|      SLOW  |         3.757(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao4<0>   |         9.994(R)|      SLOW  |         3.884(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao4<1>   |        10.523(R)|      SLOW  |         4.276(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao4<2>   |        10.131(R)|      SLOW  |         4.086(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao4<3>   |        10.085(R)|      SLOW  |         3.935(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao4<4>   |        10.313(R)|      SLOW  |         4.116(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao4<5>   |        10.441(R)|      SLOW  |         4.095(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao4<6>   |        10.296(R)|      SLOW  |         4.008(R)|      FAST  |rclock_BUFGP      |   0.000|
+datao4<7>   |         9.953(R)|      SLOW  |         4.026(R)|      FAST  |rclock_BUFGP      |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock rclock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+rclock         |    2.242|         |         |         |
+wclock         |    2.429|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock wclock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+rclock         |    2.746|         |         |         |
+wclock         |    1.922|         |         |         |
+wr1            |    0.490|    1.886|         |         |
+wr2            |    0.787|    1.818|         |         |
+wr3            |    1.337|    1.662|         |         |
+wr4            |    2.293|    2.293|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock wr1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+wclock         |         |         |    3.125|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock wr2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+wclock         |         |         |    3.923|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock wr3
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+wclock         |         |         |    3.673|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock wr4
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+wclock         |         |         |    3.255|         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Mon May 25 23:18:59 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4949 MB
+
+
+
